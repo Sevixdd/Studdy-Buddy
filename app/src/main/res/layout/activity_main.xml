@@ -4,15 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
-        android:background="#2fc7ed"
+        android:background="@color/teal"
         tools:layout_editor_absoluteY="0dp">
 
+        <View
+            android:id="@+id/myRectangleView"
+            android:layout_width="182dp"
+            android:layout_height="52dp"
+            android:layout_alignTop="@+id/title"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="115dp"
+            android:layout_marginTop="0dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="115dp"
+            android:background="@drawable/rectangle" />
 
         <TextView
             android:id="@+id/title"
@@ -25,44 +37,52 @@
             android:layout_marginTop="98dp"
             android:layout_marginEnd="0dp"
             android:gravity="center"
+            android:textColor="@color/teal"
+            android:shadowColor="@color/text_shadow"
+            android:shadowDx="-2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textStyle="bold"
+
+            android:layout_centerInParent="true"
             android:text="Study Buddy"
-            android:textSize="24dp" />
+            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/title"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="80dp"
+            android:layout_marginTop="70dp"
             android:background="#30ffffff"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="15dp"
             android:ems="10"
             android:hint="Username"
-            android:inputType="textPassword"
+            android:layout_centerInParent="true"
+            android:inputType="textEmailAddress"
             android:padding="10dp"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:drawableLeft="@drawable/ic_baseline_person_24"
-            android:drawablePadding="15dp"/>
+            android:autofillHints="" />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/username"
-            android:layout_marginStart="100dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="80dp"
             android:background="#30ffffff"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="15dp"
             android:ems="10"
             android:hint="Password"
+            android:layout_centerInParent="true"
             android:inputType="textPassword"
             android:padding="10dp"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:drawableLeft="@drawable/ic_baseline_lock_24"
-            android:drawablePadding="15dp"/>
+            android:autofillHints="" />
 
         <Button
             android:id="@+id/signin"
@@ -71,7 +91,22 @@
             android:layout_below="@+id/password"
             android:layout_marginStart="160dp"
             android:layout_marginTop="50dp"
+
+            android:layout_centerInParent="true"
             android:text="Sign In" />
+
+        <Button
+
+            android:id="@+id/webview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signin"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="53dp"
+            android:text="Webview"
+            android:layout_centerInParent="true"
+        />
+
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
